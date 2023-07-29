@@ -825,3 +825,187 @@
       color: rgb(156, 148, 148);
     }
   }
+  
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,900);
+* {
+  padding: 0;
+  margin: 0;
+}
+input {
+  outline: none;
+}
+html,
+body {
+  height: 100%;
+}
+
+.panel {
+  width: 400px;
+  height: 500px;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px black;
+     -moz-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
+  background: #5A4FDC;
+  margin: 100px auto;
+  text-align: center;
+}
+.panel .state {
+  margin-top: 5px;
+  width: 100%;
+  height: 155px;
+  color: white;
+  font-size: 20px;
+}
+.panel .state i.fa-ban {
+  font-size: 40px;
+}
+.panel .state i.fa-unlock-alt {
+  font-size: 25px;
+  color: white;
+  line-height: 33px;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  border: 2px solid;
+}
+.panel .state h2 {
+  font-weight: 400;
+}
+.panel .form {
+  width: 340px;
+  margin: 5px auto;
+}
+.panel .login {
+  height: 45px;
+  width: 100%;
+  background-color: #C1BBF5;
+  -webkit-border-radius: 45px;
+     -moz-border-radius: 45px;
+          border-radius: 45px;
+  position: relative;
+  line-height: 45px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+  -webkit-transition: background .2s;
+     -moz-transition: background .2s;
+       -o-transition: background .2s;
+          transition: background .2s;
+  cursor: pointer;
+}
+.panel .login:active {
+  -webkit-transform: translateY(2px);
+     -moz-transform: translateY(2px);
+      -ms-transform: translateY(2px);
+       -o-transform: translateY(2px);
+          transform: translateY(2px);
+}
+.panel .login:hover {
+  background-color: #a197ed;
+}
+.panel .login:after {
+  content: "\f084";
+  font-family: 'FontAwesome';
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background-color: #a197ed;
+  color: #fff;
+  
+  left: 0;
+  top: 0;
+  -webkit-transform: rotate(90deg);
+     -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+       -o-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+}
+.panel input[type='password'] {
+  background-color: #fff;
+  -webkit-border-radius: 45px;
+     -moz-border-radius: 45px;
+          border-radius: 45px;
+  font-size: 15px;
+  height: 45px;
+  border: none;
+  padding-left: 15px;
+  width: -webkit-calc(100% - 15px);
+  width: -moz-calc(100% - 15px);
+  width: calc(100% - 15px);
+  margin-bottom: 10px;
+}
+.panel input[type='email'] {
+  background-color: #fff;
+  -webkit-border-radius: 45px;
+     -moz-border-radius: 45px;
+          border-radius: 45px;
+  font-size: 15px;
+  height: 45px;
+  border: none;
+  padding-left: 15px;
+  width: -webkit-calc(100% - 15px);
+  width: -moz-calc(100% - 15px);
+  width: calc(100% - 15px);
+  margin-bottom: 10px;
+}
+.panel input[type='password'][placeholder] {
+  color: #656d79;
+  font-size: 15px;
+  font-weight: 500;
+}
+.panel input[type='email'][placeholder] {
+  color: #656d79;
+  font-size: 15px;
+  font-weight: 500;
+}
+.panel .fack {
+  margin-top: 30px;
+  font-size: 14px;
+}
+.panel .fack i.fa {
+  text-decoration: none;
+  color: #fff;
+  vertical-align: middle;
+  font-size: 20px;
+  margin-right: 5px;
+}
+.panel .fack a:link {
+  color: #fff;
+}
+.panel .fack a:visited {
+  color: #555c65;
+}
+
+.wide-button {
+  width: 97%;
+  max-width: 400px; /* Adjust the maximum width as needed */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #C1BBF5;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* Optional: Hover and Focus styles to enhance user interaction */
+.wide-button:hover,
+.wide-button:focus {
+  background-color: #9D96D9;
+  outline: none;
+}

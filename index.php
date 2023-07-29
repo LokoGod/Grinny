@@ -40,7 +40,7 @@
     <nav>
 
       <label for="name" id="logo-text">
-        <a href="#">Grinny</a>
+        <a href="index.php">Grinny</a>
       </label>
 
       <input type="checkbox" id="check">
@@ -58,7 +58,7 @@
 
       <div id="account-container">
         <a href="#">Register</a>
-        <a href="#">Login</a>
+        <a href="logIn.php">Login</a>
       </div>
     </nav>
 
