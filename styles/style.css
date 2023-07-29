@@ -128,7 +128,7 @@
     height: auto;
   }
   
-  .awesome-feature {
+  .features {
     text-align: center;
     padding: 0 50px;
     margin-bottom: 50px;
@@ -552,7 +552,7 @@
       height: auto;
     }
   
-    .awesome-feature {
+    .features {
       text-align: center;
       padding: 0 50px;
       margin: 0 0 50px 0;

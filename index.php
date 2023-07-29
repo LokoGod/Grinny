@@ -1,104 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Css file -->
-  <link rel="stylesheet" href="styles/style.css">
+    <!-- Css file -->
+    <link rel="stylesheet" href="styles/style.css">
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  
-  <!-- Google font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"></script>
 
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap"
+      rel="stylesheet">
 
-  <!-- Fontawesome cdn link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fontawesome cdn link -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <title>Home</title>
-</head>
+    <title>Home</title>
+  </head>
 
-<body>
+  <body>
 
-  <nav>
+    <nav>
 
-    <label for="name" id="logo-text">
-      <a href="#">Grinny</a>
-    </label>
+      <label for="name" id="logo-text">
+        <a href="#">Grinny</a>
+      </label>
 
-    <input type="checkbox" id="check">
-    <label for="check" class="toggle">
-      <i class="fa-solid fa-bars-staggered"></i>
-    </label>
+      <input type="checkbox" id="check">
+      <label for="check" class="toggle">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </label>
 
-    <ul>
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#">Features</a></li>
-      <li><a href="#">Pricing</a></li>
-      <li><a href="#">Contact US</a></li>
-      <li><a href="#">About</a></li>
-    </ul>
+      <ul>
+        <li><a href="index.php" class="active">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contactUs.html">Contact</a></li>
+        <li><a href="aboutUs.html">About</a></li>
+      </ul>
 
-    <div id="account-container">
-      <a href="#">Register</a>
-      <a href="#">Login</a>
-    </div>
-  </nav>
+      <div id="account-container">
+        <a href="#">Register</a>
+        <a href="#">Login</a>
+      </div>
+    </nav>
 
-  <header>
-    <div id="header-container">
-      <div id="header-page-title">
-        <h1>Creative landing <br> page</h1>
-        <p>A creative & modern landing page with lazer
-          <br> Template& we love make this amaging
-        </p>
-        <div id="header-subscribe-form">
-          <input type="email" name="" id="" placeholder="Enter your email">
-          <input type="submit" value="Subscribe">
+    <header>
+      <div id="header-container">
+        <div id="header-page-title">
+          <h1>Protected Path<br>to Success</h1>
+          <p>Your Safety is Our Priority: <br>Discover the Secure World of Our
+            LLM Program!
+          </p>
+          <div id="header-subscribe-form">
+            <a href="aboutUs.html">
+              <input type="submit" value="Discover!">
+            </a>
+          </div>
+        </div>
+        <div id="header-page-image">
+          <img
+            src="https://www.sentinelone.com/wp-content/uploads/2023/04/PurpleAI_PR_BG_2500x1200-1600x900.png"
+            alt style="border-radius: 15px;">
+
         </div>
       </div>
-      <div id="header-page-image">
-        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSxNAKZmyBqAAnvGhwSVyZAOWAYl7D_-kz5xjD-YBVZX-raEA3A" alt="">
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <section class="awesome-feature">
+    <section class="features">
+      <div id="feature-text">
+        <h1>How do we stand out</h1>
+        <p>Discover an LLM program that stands out from the rest. At our
+          institute, your safety is our utmost priority.<br> With personalized
+          attention and support, our distinguished faculty of experts ensures a
+          nurturing learning environment.<br> Our cutting-edge curriculum equips you
+          with a competitive edge in today's legal landscape. Join us on this
+          exceptional path to success.
+        </p>
+      </div>
+    </section>
+
+    <section id="creativity-features">
+
+      <div id="creativity-features-image">
+        <img
+          src="https://images.theconversation.com/files/529701/original/file-20230602-19-933y42.jpg?ixlib=rb-1.1.0&rect=0%2C263%2C6279%2C3140&q=45&auto=format&w=1356&h=668&fit=crop"
+          alt>
+      </div>
+
+      <div id="creativity-features-text">
+        <h1>STAND-OUT FEATURES</h1>
+          <ul>
+            <li>Secure User Authentication</li>
+            <li>Data Encryption</li>
+            <li>Firewalls and Network Security</li>
+            <li>Regular System Updates</li>
+            <li>Privacy Controls</li>
+            <li>Monitoring and Incident Response</li>
+          </ul>
+          <br><br>
+        <p class=text-center>At Grinny, our paramount mission is to ensure the safety and well-being of all our stakeholders. We are committed to creating a secure and protected environment for our students, faculty, staff, and visitors alike. Through robust security measures, stringent protocols, and ongoing vigilance, we prioritize the safety of every individual who engages with our institution.</p>
+        <br><br>
+
+        <div id="creativity-btn">
+          <a href="aboutUs.html">Read More</a>
+          <a href="pricing.html">Buy Now</a>
+        </div>
+      </div>
+
+    </section>
+<!-- 
+    <section class="features">
+      <div id="feature-text">
+        <h1>Choose your plan</h1>
+        <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Fugiat
+          reprehenderit nesciunt magnam
+          dolorem voluptate earum nihil, <br> enim similique libero labore nulla
+          natus repellat esse assumenda.
+        </p>
+      </div>
+    </section>
+
+    <section id="plan-container">
+      <div class="plan-item">
+        <div class="plan-money">
+          <i class="fa-solid fa-user"></i>
+          <h2>Simple</h2>
+          <h1><span>$</span>19</h1>
+          <p>user / month</p>
+        </div>
+
+        <div class="plan-benifit">
+          <p>Bandwith: 1GB</p>
+          <p>OnlineSpace: 512MB</p>
+          <p>Support: <strong>Yes</strong></p>
+          <a href="#">Buy Now</a>
+        </div>
+      </div>
+      <div class="plan-item">
+        <div class="plan-money">
+          <i class="fa-solid fa-user"></i>
+          <h2>Basic</h2>
+          <h1><span>$</span>49</h1>
+          <p>user / month</p>
+        </div>
+
+        <div class="plan-benifit">
+          <p>Bandwith: 3GB</p>
+          <p>OnlineSpace: 2GB</p>
+          <p>Support: <strong>Yes</strong></p>
+          <a href="#">Buy Now</a>
+        </div>
+      </div>
+      <div class="plan-item">
+        <div class="plan-money">
+          <i class="fa-solid fa-user"></i>
+          <h2>Pro</h2>
+          <h1><span>$</span>89</h1>
+          <p>user / month</p>
+        </div>
+
+        <div class="plan-benifit">
+          <p>Bandwith: 5GB</p>
+          <p>OnlineSpace: 4GB</p>
+          <p>Support: <strong>Yes</strong></p>
+          <a href="#">Buy Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="awesome-feature">
     <div id="feature-text">
-      <h1>Awesome Features</h1>
+      <h1>Letest News</h1>
       <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Fugiat reprehenderit nesciunt magnam
         dolorem voluptate earum nihil, <br> enim similique libero labore nulla natus repellat esse assumenda.
       </p>
     </div>
   </section>
 
-  <section id="creativity-features">
-
-    <div id="creativity-features-image">
-      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT4GvoUrEfrFfkPddQvyNU8XDftwZJcPXb30KM_lIxJUO5EyiA1" alt="">
+  <section id="letest-news-container">
+    <div class="letest-news-item">
+      <div class="letest-image">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYVFRgVFRYYGBgaGhgYGhkYHB8YGBocHBgZGhkcGRkcIS4lHB4rHxgYJjgmKy8xNTU1GiQ7QDszPy40NTEBDAwMEA8QHhISHzQsJSs0NDQ0NDQ0NDQ0NDY0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIALEBHAMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAAEBQIDBgABBwj/xAA/EAACAQIEAwUFBQYGAgMAAAABAhEAAwQSITEFQVEiYXGBkQYTMqGxQlLB0fAUFWJyguEjM5KisvEk0jRTwv/EABsBAAMBAQEBAQAAAAAAAAAAAAECAwQABQYH/8QAKhEAAwACAgEEAgEEAwEAAAAAAAECAxESITEEE0FRIjIUYXGhsTOBkQX/2gAMAwEAAhEDEQA/AM2F8amo8atCVMJX3J8s7KQKmq+NWhKkErhXRWEqQSrglSCUNom6KAlSC0QEqQSl5CuygJXoSiBbqSpSuhHYOEqWWiBbqYtUrsHJsFCVNUooWamLNK7QU2wZEq1UohbNXJYqdWispg6JVyW6KSxRCYeoVaNMSwRLVX27VGpYq5LFQq0a4kEWzVos0YlmphKz1RomQJbMValuihbr33dSqi0yUolWqtSyVMJUqZWUQC1LLU8tSVak2USIBaGxrvGS2BnP2m+BBzZuvcvPwBNHBakUmkp7HSMw3AiQ51MoYLGXd3Pbd+/KAAOQMcqItYQftNxAYDKXkaaMyB1nxWZ5ZvGn93sqTEnkOp5Uuw2Hy4gKdSLPabqzXJPzqLSWtDpCV+DgtnKhEk+GVZKkDQkmdydS1BYlHa4QoUIiqPdhsnaOwJiCc2pj+9bPiGEzoqTAzLJG4VTOnTalq8OLsyIMqqEUNHRgzQCIJn5eNLUr4KS/kz+PKmyGZCWOZUAnJoR2j97QHYRz3pKOFqdSdf5t+/at3juHI10LnOd1fYdkQoBMfy9kfzd1DX8VZs5bdxGZlUCdNtY+LXasuSPy22Ul9dGFCVMJR/7GelccMRyr9B91HwTp/QGqVMJRQs91ei1QdiOmDrbqQSiltVJbFI7F22ChKkLdHLYqxcPSPIHjTARbqxbNHrhqsSxU6yjLGwJbNWLZo5bNQLKCASATt3+FTeQqsZQtmpjD0clqatWxU3lLTiAUw9XJYo1LFXpYqVZTRGIBWzV6WaMFqpraqTyF5gpW33VcluauRKvRRUas0zIN7uuNujAlRZKTmVUgmSvQlXlK5UoNjyioJXBKvC1xWptlUinLUlSp5akBU2yiIZamBXuWvVWlY6IskkTy28eteLYGfPzy5fKZq0CrAKm2Mil7IaAdgQY6xqAe6YPlVhTyqYFSApdhAblpEcPEtlyKBqx1JMDz1J8TSjEWyWYtbtzJmZY+oNOsbjRbE5ZPfA89JMUAnE52RYk7kzvJ5dTWbLllPTZfHjpraQnGE7qmMIOYopLkVctwV9M8lHyqxwLzglPKo/u4U1kVMInhS+9SOeCH8CU8N7qgeHGn62AdmqwYcjvofyaQP4kv4M8MEasXCHpT4Wuoqfux0oP1DCvSSIRhj0qS2u6ny2RXjYUUvvjfxfoQusCvnPG8XeOJ/wA22uQnIEuDs6xL6fF1B76+s4uwFUsdgCSd4A1Og1r45jsUj3HcOrgn4kwwVNySGB1JHUyTQvN10aPTen1b5L4PpPBrjPbRmKFiNSjZkJ55W5imqpSP2IuK9gBXR8pIOS37oCdYK7E9SImtWlg9K6siJey02gVUq1Uq82Y1Onedq9tsp2dTrGhB16fOpOysweIlWC0KuCVYqVJ0WmAYW6mLdXdnbMPCRUglDkOoKAlcVqZuJ95f9QqLOo3YDxIFDkOpKyteRVjGq2am30MkRriCDBorCXF5xNFsoO9SquyikVEV1E4mzl1G30ofX+50HrSuh0j1akKruXUT4mVfnPhS+7xtAYUFu/YVN2vspMt+ENlqQpZhuLB2ACEDmSdvlTVsWgEzPdSc5fyFql8ElQmvWttGkT31R+8ByFSGMnlSPLH2dxr6FuLw0Nr2maABud9z0/ATXJw9gOQnUieZppasCQZ111O5J5/WiMtS9ib7ZRZ6S0jIKoqYHdUrRRtVZTrHZIOvTQ71Z+z9DX0bpHzPFkFHjUxXCya4K3ShtB0yYnpVqNGxI86X4niNq3pcuIh6M4B9JnkaT4v22w65givcYGBHZQ9SGPLvjWaXi68IeWa9Lp6+tddxqJGdkWfvMFnwk18vx/tfibnwkWVjZNW/1tr6RSS9ed2LuzOx3ZjJ+dMvSt+eh1k0fT8R7Z4VWKjM0TLKBlkGNCSJ8ak/tjhspZWJaCQpBEkRpKzEz8q+YItEW01qn8WPtgeZmrxftlcdH0t2Z0VzLFZ2OUmGPdWBu4wuzlsW7tmknKQDA3AYg+VOMddypAs+9n7JXOojmVmT5etJrL3Mse6UAE6Bl05QUBAFY/VcYfGUbfSKqTpmo9n/AGgxCoVXErcgQAyQyDqC4Bb5ircVx/FNM3n56LCj/aKW8Csu7hf2YKDp75Uy5dPtmSCJ+6Qe403vcAYNlZxr8JCkieYPSq4uLlPS2RzJq2hRd4jdYQ1xyNoJJ30NUriH0OcyNtdq94nhXstlcbzBBkHw/KvcJhcx7ZIETtv611MeJGOE9pcSm11jt8XaGnKG0iKKf2qxTTN2ARlhVAEHeOh76uw2GtA5igM6baAR02q/FcGtXF/woRx02PcRUK0WUiBnc65j60QuIuffbv1NVX8Det/GjAdRqPWqlvGptjqQi4T176qZ25n8a8a5ReCtoykvmkEQBsRBJnnyqVXxW2PM7YRgfaS/aGUOSvRoaPDMDHgNKMHtndiMqE8zl/JvGjX9lEdbb2yQCssdwTG/d86ZpwlGtJadR2CCCABmjZjHWdazv1C+CqxL5LOAYy/cyvcTLJzCIC5ZIkg6+FNU47bLm32gwjcHWTAiOVDOxVQgEAQBGm1L3vOHmREedZ6uvKZRRLNYt3STWP8AabFXw3+GWVRGgE666jSib+IuNlCtGWNOtE27rbnU7UKyU9BnGp7MX74/aZif4p/Grku99azE2xcUhkUmCASNde/lWZHCjJVZLCDBOXfy1pHl10XhJhOHxUUfbxQpVa4e43Eb+cVbbBFSrJssoTH1m8DTPD2gdiKz2HuUxw98jXnQjIk/yEy4nr8R/btxUjQFrGnnrRIxAr0IzY9dM8+opPs/NSmNtPDSr7OKdNUd1P8ACxH0Peau4fw9rjBYIHMwdKfYv2aYlVQAL97cnx05V9hXH5Pn3aT0L7XtLixtiH84b6ipX+NYq5Ie85BEEA5QRAGywOVMD7M+77b3FyrB1Ukb8wNfIUl4liVzv7ktkGgIBCmBqYM6dxrHnzYsS3pNlMarI9J9FYw53Ne28MSQqgk9BV1riEKSRnQASxEMCSNSBymedPeHe0yKMq27ZmAWHZ5AT3moT/8ASx0u00UfprXhpiBrRUwQQRuDyqxLdbF2wLtndyDc0yu0HQDaOk8jzpbj+DJM2biGQCELAk6xIM1on1OO/DJuLnyhPbTSm2HxSwFdVblJ38JpXjLnuSFZDmMSCQNzHjV+GxifFJEEHWDsRvB6x3d9Tr1eKW5bB7VUt6L/AGiw7IRbTErh5C/4byGZjrJdTtBG4gRWct2iF7WIZZJMswAJnddfxo7jFnDXrrMt++XYkspXMgkSJeNBOmuaPKhP2C2m7Mmg1Us4M9YBHqK8vPlVPf8Ao9f00KZ1/vod+z2HuM65McgM/Az5ywnWEzkbedfQ/wBxhkze/htTt2e4da+U4HC4UtlfElByyoTJ5dvIMuumsxFfR8DjMiKquXUAAMTmLDqW5mniqc/iwZJnl2ig8DvvGbIV67/KKc8P4AlvKxOZhrJGngBUrXEo0okY2RyrPmy2+mWxxK8Bl3h1u4hRlAHdpHfWc4hwk4dgUYsp7tR4xv40+s8RG3OiMyt2jUZyUhnGzPWLp2bzBFDfuS0SxyA52zaSIjksbA05xOGDkvERppz8qMt2AiSD586vyTQjnRm/3KkMDhzl3UiZE8p5+dUezeCsrnF4Ke0QqnmCNZHPatVZxjDw76pxeDtXdWQBvvL2TPlv51HIm10NL77GWFtIFASMsQI2A6AVTi8GS2YHTpSjD3msHKJcTz1I8+lGnjHdWZ61podS09o9e3OhMUrxNvK2+1X3+IhtRpS+/fLUumVRcs70bZcUtw7dausHWkextDlLUiojh8a7mNCanhLmm1MLdwU0zNeSdVU+BHfwDEyGg+seApcmDeTB2nfTzrXlQTQHERpAAnlrBqWXApW0x8edt6EPu8vP/ur7delI0Ir1UrNpmzltBFs0SGoRKtzUyeiNTsxoKDmomOnfH0PpUOKcUe2kouYkaEFYA2kAsJ35TWUs8cVnUuihtFzyQOknkI0+dGe1eLS3ZVCA5OikzlggzDDfY7Emvq3653TlrXXTPml6HhKre3vtC3i/tI7pkD7fFoFZvHQCdiANvGs37zXeD1/ONKHa2xGeGC6jNHZ22nyqzCliRknNvAHTY+HfWa6dPdGmYUroLtYwjs9og9+5I5g71NGh5ViCTJXfKe9aCUNmEgnnA00HPbTxpnhsA12QhRSTEswWNoEnTWpOe+kM9I65jC28EeOh8Om3hVEIVBQHNMQROup5bbQB3V7ewNy2FDd45GCD8OmoOk+Y8nfB+HX8uUH3Y1MsikiQNjBMRPjStcV0cu+xRZdmbtuwzAawSdT0Gp/tVl1Sm7iNDmU6AkTpI3A3Ed1O2wd05slxGdVIUwoJUkFhMRm2An5Vl8Th7oJDJczSQc0aH1oxqls6ZbZ77w3Bkzu3PLGVSf6V38RRNq2imMzWzt2nkHzyERNDYJb6NmRUBAJhiJjmTrPOpXmZyOxHcrKRz212ovW9JmqZpLwMbeTZsQOo0VxzMyFEf3rbez2HsIh9zeN3NBbtCAecWx8J7zJMb187w+DLEAqygkDMQIGwga6nUaUTg8K3viil1gtlfKRJWYiNpiqQ1D23sncuvC0fVQ07VZ70KpLbAEknaAJrCYP2gxdlJu2nZCOxcdGiZgHMvxDfQ0qxnGXuHM5dzrEiAP5RsB4UMlxS6OlWj6JwziiX5ZGiDBU6HuiYmRrp1FO7bnqa+QW8Q+VRkffMSVJkkzOg6HSnfDPaa8jBCr3V0ABR8/k0Tt1005VGdeGVfI+nWrnfRDXNIpDZxJgGDqAYOh8++iRijVGkT5BjOeVcLlB/tXUVYL4PWg9HJkrz6UlxuJCMgae22QdAYJE92hpm5B56d/51839oL9p72cXmcHbsgKsTopO69NPXeo0kUltvRuVnYVC24JigOAXEdMiXWcrE5hlZQdhH3eh1pp7iKkx+WmSUVcmmtDqCK9k0rQVYxTFMOdE2ceRvScOa8D1NyPyQ9PEDyqm/fLGYpYj1etykcN+QpyvAYj1NqD95UhdpXBRUFKRUqEW5VnvqHAbZ8Nt8TsMpDI40+8CAfGNvT8aha44qHKuYpOiuAUE6EwT2d+UVBfZzEHQKsRqc2k75fGRHTSqMVwZ7aq7AANII1zKwIBWOe49a9Sc0J9M8tpvpo0v7/wAIURLyFcnaVFXOqyNCCNNvrSrh/FsPZuBlZoE9rKxJDDYhh2ok7/OvMLwHMwZVvPGVgRlWCACVIYzmB08quu+yvZLf4itEqHCGecHK3ZkAxNTv1GOumxuLT8EcbcW67OhAV4TSQxAaGjWAsRIMDuFH4XLhyiBi8kH3iOqASCYmYBkNqxnblSXA8MfI+QC4p0LKZCErqWVoIMFh670XhsB7lDbchWeHELMEOAJO5mNBVZyzPXz/AJEvGr8+Bxax1pw9pw4aCQHIYAkTq0yG7gNZMjpDglz/AAnW84VNbWcnLrmbUZhqZy93pSriWGW4RckBWKiCDoUBmVXkZGnfXYnhRRUuPkClAU3WV3hRI5sdOpppyJ9r+os4lHWw7hfu0YXM6dnVZdZbuKTMTG87Vphxew9mX92GZipAIIPZkH4iQBEZjzIrEfudW+2kmDodPSNKhcwISB2HLMvLNABGYx5j50nFp8k3r6+GV0n0x7i8Cj5H7JJRCYEH4RIYc2AgSOgoS1gU7MqCY231qVqyVUZbiBdhKyw26HSpHCNMq9vXoSvoJ08KXz/Q0zXHz2BYm3kYKocAQ2kEKWjkdASBzPIU8xF0Lg7JRWRjeAzIRnabIILHv3A5aVnMdiCrsJGY5ZykmYI0Ov57CreKO4RSX+0IUEsBAiT1MKBPlypk9LROnyraNP7McXCgB5ZBnJzgTybYDqWPdU2TE4nOcMttQXD9kpmPYRCYuLqkjoIJ7hWawuOZEiF7SakntZW0JA67xTLhuKKhGRpKSBmco4J1MMN12FZYiseVv4ZVualfaArGC7KuyyySMxOoIc5joImfpX0TgKf+NaORR2dCNTEkSTG5rELgLhRgY3YyrgwWJOo2O9aP2e45aS2UuuQc3ZkMwCwNgqwoma18l8EKVaNF7qvMtBD2gw33zrzKPHrlpfc9rrGQPDf5mWI+znjMT1KgkDrAPWubJ6f0PwtUftyCe64tonSAzKGGs98eNZp+M51uurgEPYdVz6dlmDDKSJEAEgTWZbiErqdC5feO0fvfP1pWMpPonFOPWbAGYlmOaEXc5WKtJMAAMCPKsPj+Krdu5wllNPhSDJExmaBJPhyFN/Z7itt1vJiFVlGa6peGAYiCFmdTPLXQ0DxMYc32AcovZWETsgBEBZYPbJbNtE0teB40mNeE+01tFVHRVUQM6QR4um894nwrRnFJrBzRbN3T7mkevLwrJcEwFhmU3HUqCQUuIVzL2hqSRHI6/hQxxwa5iXSI91cChmYkKCqqsEk5o7zzoaOpLfTNlisZbRA7OApiDvPPbwM1K06uodCCp1BHOvnudriLEnKSNyYJjYd/5VoeF8Xa1aUXUhcyopBkyfizeA9dqT5Oc6XRoStRIqwA1FlNNxFTPFNSD1A15rQ4jqi3PXe8qmolqVwUmggXKl72hJr3PS8B1Z82T2gQtJVoKSWzMQGgkLl56tGumlV4jjkImWCzKcwLucoDAJrPxEAz5UImFtAGS23qaLwfs4X10RdwXIWRzIBM/Knn00N6SMLprthn72QNlc9rs6K7mM0GMw3IzR5VB+KYcJJZ2eZyqWhjqIBJ7IiJpgns5hlCu9zUkQ4YKDEfCetB4P2ZsO4AuoQwJ0fXnsO6KF+i1rz/AGR3upvyVpiciXHt2raL8BLqS77NA7Ukfa6d9Z7FXS75pX4I0zAc95M6U9x9tUcqO0qFTmmTGbWQdxGk9KOt2ExDIyLlGSCCNJUliTproDVowqdv5+gcuzOWjCJlgtE7nQ6/ZBGu/On9tM9jLcAKwupcJs1woYYHLJL+OUdKDxHDmtqHCypgZhGkTOYHv+ho53Z7J2RESICyX7Tatrp2i3hmNTrG2tJtfIXreiq3gLeRR7tGE/EbygnU9wjpVlnA2wWyqFPPLfUx2k7MxqJihsLfd4ChGJgAER9dKjxCy6FcyKh/gYagkTt3gVL2K02qf+R+k9B4wtsHQgbbX+4bDL+dSvYa3Jm60afaJ11gfBqOUxQiPIACecwT416MSdAEHnrSrFXnkwpLZTicDhz8Vw782K6R/JtXDh2Fy6v4DO0b8ux40NircuTsRGi8tf8Av1onH4R/dI5ACs8CAQJifprVPbrX7MOkjkwGFHw3H8mcjw/y9qccNsrkIGTJGpLHMNNYJSZmKUYPClxuohemsKCd+taDg/Anu21dCiiSDmkmeenSajWN2+KptjOdLb6R41oaaJOVcgLNG555RyjUyeutHcGsuVc21tEbSe3rH8aEx/as5+2vlOo5jRRrB/tWt9lkyWDoe02bXQEQAI6iBVMfpa33TEqkltEHwGJbKSbYykGFVAD1B/wtVrPcQw//AIzMjr7o3iqqUGcvPb7Yjs5pgdIrc++oazw+2qBMoyhy4B17RfP9dPCtU4XL3tv+5LmfMxgXBYsGhNH/AIScwAJ8QagLKwJzRm6jpzEVv7/DCVuINnewJ1+FZLH1JrMtwh8gMGfem3oD0BB+tGpY6pMWNhVJ0DmBrlIj6eFWYfD2w2vvJ5bTPdHOtdw9reCRxcBL3C6jrlBIHzFIeK8SV77uijKCGQEfahJnTXVTU6l68hl7Z4mHWN70d+U+k99dgkQZ4z/Ac+bKRlkTEc6K4R7QtadS4BSZIgAmc3ONNWmpHBlXxSKIHunIG/YZ0YanfszrU/a2vLGda6Bblu0XaM/xQckZJ55egqyxasq6NF2feAKTGScwIktqRvpvFDYjDPbtoSGAbMZ67DetNwng6vaVrjFgSrqOkCD60iwtvW3/AOjO0ls1Q4rfH/1x/K//AL0SePH7g/1H8qUuapY1qmEiPJjo8dn7H+7+1UPxefsR5/2pVNe03FB5DEcU/hPyrn4qNOzqNeWo56frlSbiGKFpC5ExAAmJJOwMHXf0rOYn2lugghFA0nKczjvB6x3GlrSHlOjfHi6DdY8h+ulUXcQpM5G/pgD0pBhsWCi3c+ZO1qQNBm1AJ+1qTB30EVU/tEiHKGLDqEMf7taV1PyOk/gz6cCVHElidDtpI1o32lRjbV1co3RSQIjoKHwnGCzAMR8qI4ziA6ATy5T+HhXpP0ky3UvyvB5nv1SUtf8AZjHxTlVVmYqDKz17j0rsNddWlSZiBr1o/E4HKAyjNpqGGb9b0tyHeDvvBivPtVL7Ly010WLiHzEkySMpnXTbWmvCse9oym4nlMTvHTek6od6vw9xlkATI8+lIrae0Ck2ugvFEhM8mSY5c5mjuG8RYg5hmU6RA5RSvEXXZVQgws7A6zzPp9arVGUACd5gx06Gl7YY2l+Xk0nDLyB2cLGkrz0nuGleceuWXlj2mWFmCDzJE6aa+tZsuw0mCARv11qgrVJpTLlD73W2PMfjlzwg0AA0EDTT6RQqYsaeFL7WbrA5muy+NI+2VVa8Br3CTI5wI6xTfFYrPhrST2luNI7sgAPypJhUJ179tfypngeE3S5YLp2tJ/XWilXhAqtvY69m8Giqlxz2TI1BiNREx3VPEYh1z+6xLIhuPCImbTcHUDc99Swfsw7J2iRpAAMMBM75daUY3gLoWhXYAEzIjT6104/bbrXbDVutb+Bcl0hQs7/nW/4LiUNi2ucFsg0kSPKZrFYbhbvHZbp8LVqODey7khs7qNNJJ+Q2qmOmmJUpo0CWKvNijGtBRuPWD6VK6kKDpWnaJcReErz9lWQY+3n/AKsuWfSiAk1elnTWPWuegJMWY/BJcUh10jevnXFsOiXYScsaEgD6V9Wa3Og/Cvn/AB/hDi8uVTrmAkqF0E7gab86hk00VlaGnBOE2CocAOQBO0A+lOnsK5fT47eRo+72v/Y15wrBlEEgBmALAbT3Eb0XbtxTKVoV+Sq5hQ4ysoIEQOWm23hXvuYAAEAaCNqMRKuS3OlLpIKQsa1Q7JWkXATvNSHDQeXy/vSutDKWZcIelTaFBLaAAknuGpPpTTF4RUBZiiqNSWER6Vh/aXjSlClv4TEsQRz2E7DnPlU6zJBc6QNxXioxDJbCwA5aZ+KB2TqNOdBPhQzAA5j+tqXcPYrca6VjYIIGpM6kDuHPrR2J9oXUxkQ9My6weciKK3WPvyx4emTxLsiaHNbB0VZXmx7ZgZjGs8qWe9XmmtXYfGSMqZl0MrIZO/bUDbrVgwVyBlFuI5MnzzMDPlWPjc+UXmtC8I41g+U/OikRmEsduu3kda1dj2eCmXcSNQIkjwyxHPmag/AbIbRix8Rp3domvpPyPF5SZw4bTSD5kt4gAUNiOHvBJAHPU6+OrfhW7XBWgcqDN3rEbaiq2wepjvExI+SifOo5cPPyNOWUYNMHyM8iIg/9VcmGAI15z+jFau9w3MTmRvEKR56x9aBv8Kyic532EgDx7PzmoL0qRT3ExaWG2n6jnFRBqzE2FQ6kk6TDAnXXkKGZhOhnx/6FUWOUdts69YzQdPTX1r18ASpiAfAV6r0St7qKnWCW2zk2JLuFZJnoevLyqgUy4jiCNNTodNSBOk67etK1eslypekaYexnwtz8MTJmIJnly25V9H4KQU1ORtxIk66mAdfnFfO+FIJBka7jn+vzrb4biLW0yIEReikqNt9I10rThluSd0kzXYJ7cDM4M+C/8tTV+J4ctxWUnKCCBORl/wCOlYS5xh5EOn+v6yad8N4w865G8gSP90U14/oM2O+FezqWgJIOs6Rl/wCIo/E45F7M6jTYkesUqxHGGCABHO8koMoHdEikuI4jmMuVEToTA8gxoTh35OrKl4GGNxILEgiPCvBjAR17wpP0rP4niCwYI8mWPk80ttcTA5Lv/F/7VR6XQibb2bjDYrskkwB1U/gZr3DYoNqFkmdVzD0DHWsV+8pU6J+v65pnwTFyonQE6gRBEjkTP1qNlJZs7FjSczef96ru4VWdSfs5t1zTIHPblTAOoWcp2HSPmag5UnVQR3qCRUt7KlJwg2HyA/Ogb1uD/wBfnTC4ijbTwj8qXO0sf7flTIRltpQBy+VX4ZNaHQ6xP69KMs/rSuYUhjbURQ/EsULNt7mWcqloHOOWlVXcRA0k+GU/VhS04uQ0o8az2AfUKDU2MkfMvaX2kfEMQzhB9lCGKzqBAHONz3bVm8bjC8aZhOUqBBHTXpPWtb7Rezocs9tgv3hkKacgBGkAAaATrWK90LDy6OGBidSpIPfFTeFb2xa8jC1mCdpWzEsWB+IQAATG2grnYFIdZGwI+Keo6nxqluJM4JLTyVQogmTIIjTy7tai+JaN4G5BEkGIJDdTHlWr8ZlNeBVT12WWkAnMAYkEjQgjTWg3xBJJBMT+udV4jFE9lVMvsAN+U+Ne27Zjahyljp/Z9TXEneT4aR9K99/rv+P/AFStbtWq/eK+g4o+b3QxN78+n51P3oJnnS73sVNb3j5A0OKGVMNa2jbqJ6xJ9TUhhkjVRry5fKhkvDrVgvDv84j6zSOE/gpNv7Jvw61GqIBvlGn69NaVYjBpnhbAHQM2+/RxpTU31O5nyJ+k1Jbq8s/gA30Wo1h34Lzm15Mjfwjk9lFB6KHMf7m+dergboWSABH2iij0cj6Vq2C7gAd7Kc3qwqwXwBIgnqP7A+lT9hlP5CPnfELBykyviGUj5eNJxX0HjAV0MgN1EEeEyRXz1hl06V53qsfCjZhtVO0OuG2njQdNZy6R3mD/AGo177KYYtPTQeGoq7geCUrmYo2gOVgdJ/izTPgOdHnBJOiIddNWgadTHyNacWKuC0RvLPJpiZ8Tm3JIH661bYxRB3/XeaZPw8ne3bnqHefrqa8sYPtQbSDyzRvrq4p/ZrYPejR5h8YzTqsDbMTv3GINeYrFPGjDwWSfSaaW+HIB2lTqMoKH/VJI8qrfhdhwSoBP8Lk+OuppnirQqyy2Z25iX2M+Yioqj7hW9D9aavw62N15wSLjfTJvUH4ckSEYiTH+Lr5DJAqXtUU5oWPcbYz5yPrRmHxZRV1Gh6n/APNXJgUMf+PdnnFxGHrpFXrw9Bp+zXj3lkP0c/SleJsPNB375BOYOsx9+6Nx3tp6U8/e79iCCIEsHJB23GQ/Wss+CtFf8i/ufhKz6FtPSjrVlEIGW+JGhAJA8cm58q5YB/dNzbvh1kzMdPnvQmEtks0q4E6djNI/CrOCM2TUNljmCfQnejbJWZ+LUwCgBG/UCs7Wm0XT2tlN2x2gJI7/AHZ+o0oS5xIISAJA+1nVR6Ez8qcX7rCNGI/pA+WtYrjWFL3Wh0RpBXMqnlrJyzry1NFQ2wOkgrjHGRkJUk/yOTOnQ22FZh+K6ElH69oWiPX3dC8VR0aHe2xiA0BSdtJI/Glly/qNU/oiPkfrV5wrRGsj2N14uCCJIkcgkecRS/ieHF9CsSw1U7Se8melXYQkicsjxaPXPRhC9EHX42+hamcT2gcm+zA3FZCUMqykyJ/LwrhiCCDoSDpPL9da1ftBhU92HVVkN2iNNG0jLkBbXv8AWslfBBy5Z5Cd6y1j+GVTTRL3wiSpzgwI6nfQb0R7zogjvIn/AHa0IoZDtDDWqDfPMCfT5DSpPEc0fSVq5q6ur6c8A8Tf0q59xXV1A49ubUJh9q6urkcE4D4h50Xc+IV1dSsZeAhaDv711dQRzBuLf5PmPrXzy58R8fxryuryfX/sj0vRfozY+zP+Wv8AKP8Ak1OrX+a38ldXV6GH/jkx5v3oIb9fKoJuv6611dViSJ2/ibyqGL+C5/KfpXV1SotjEPCPg/qP1FObX5/SurqkjQ/IFxD4RVPD/hfy/GurqC8gXg0GG+EeH5VJK6urmcjVcP8AhT+Wp4qurq89/szcv1Rn8V8Q8Pzrj8J8Pwr2uq30TXkAHOopXtdVZ8CvyKsR8fmPwqn2g5eA/Gurqm/Iy8AXDvxP/A0luf8AyLX8o/4mva6p5CkCriHxmllzeurqkMz/2Q==" alt="">
+      </div>
+      <div class="admin-and-calender">
+        <div class="calender">
+          <i class="fa-solid fa-calendar"></i>
+          <p>April 11 2020</p>
+        </div>
+        <div class="admin">
+          <i class="fa-solid fa-user"></i>
+          <p>admin</p>
+        </div>
+      </div>
+      <div class="letest-text">
+        <h1>Best traveling place</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae quod quisquam optio vel dolorum
+          voluptas incidunt numquam, nobis excepturi dolores delectus veniam corrupti consequuntur neque
+          necessitatibus? Reiciendis quam velit dolore.</p>
+      </div>
+      <div class="learn-more-btn">
+        <a href="#">Learn more</a>
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
     </div>
 
-    <div id="creativity-features-text">
-      <h1>CREATIVE FEATURES</h1>
-      <h3>Build community & conversion <br>
-        with our suite of social tool</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sed ea eveniet possimus dignissimos
-        error harum deleniti minus nostrum tempore, ipsum quas quibusdam! Voluptates fugiat cumque sequi totam
-        debitis animi libero iure magnam itaque neque.</p>
-
-      <div class="creative-footer-text">
-        <p>Donec pede justo fringilla vel nec. <br>
-          cras ultricies li eu turpis hendrerit fringilla.</p>
+    <div class="letest-news-item">
+      <div class="letest-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6yfFlLq1XrSp9HZYMVhqp4KE6L4wgg1CJA&usqp=CAU" alt="">
       </div>
-      <div id="creativity-btn">
-        <a href="#">Read More</a>
-        <a href="#">Buy Now</a>
+      <div class="admin-and-calender">
+        <div class="calender">
+          <i class="fa-solid fa-calendar"></i>
+          <p>April 11 2020</p>
+        </div>
+        <div class="admin">
+          <i class="fa-solid fa-user"></i>
+          <p>admin</p>
+        </div>
+      </div>
+      <div class="letest-text">
+        <h1>Private meeting room</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae quod quisquam optio vel dolorum
+          voluptas incidunt numquam, nobis excepturi dolores delectus veniam corrupti consequuntur neque
+          necessitatibus? Reiciendis quam velit dolore.</p>
+      </div>
+      <div class="learn-more-btn">
+        <a href="#">Learn more</a>
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    </div>
+
+    <div class="letest-news-item">
+      <div class="letest-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLRNnQmUXSc_daOKNdISlaqf2jTNRDdvg_GA&usqp=CAU" alt="">
+      </div>
+      <div class="admin-and-calender">
+        <div class="calender">
+          <i class="fa-solid fa-calendar"></i>
+          <p>April 11 2020</p>
+        </div>
+        <div class="admin">
+          <i class="fa-solid fa-user"></i>
+          <p>admin</p>
+        </div>
+      </div>
+      <div class="letest-text">
+        <h1>The best business ideas</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae quod quisquam optio vel dolorum
+          voluptas incidunt numquam, nobis excepturi dolores delectus veniam corrupti consequuntur neque
+          necessitatibus? Reiciendis quam velit dolore.</p>
+      </div>
+      <div class="learn-more-btn">
+        <a href="#">Learn more</a>
+        <i class="fa-solid fa-arrow-right"></i>
       </div>
     </div>
 
@@ -106,108 +278,95 @@
 
   <section class="awesome-feature">
     <div id="feature-text">
-      <h1>Choose your plan</h1>
-      <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Fugiat reprehenderit nesciunt magnam
-        dolorem voluptate earum nihil, <br> enim similique libero labore nulla natus repellat esse assumenda.
+      <h1>Contact US</h1>
+      <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit.
       </p>
     </div>
   </section>
 
-  <section id="plan-container">
-    <div class="plan-item">
-      <div class="plan-money">
-        <i class="fa-solid fa-user"></i>
-        <h2>Simple</h2>
-        <h1><span>$</span>19</h1>
-        <p>user / month</p>
+  <section id="contact-us">
+    <div>
+      <div id="contact-form-item">
+        <div>
+          <label for="name">Name</label> <br>
+          <input type="text" placeholder="Your Name"> <br>
+        </div>
+        <div>
+          <label for="email">Email</label> <br>
+          <input type="email" placeholder="Your Email"> <br>
+        </div>
       </div>
 
-      <div class="plan-benifit">
-        <p>Bandwith: 1GB</p>
-        <p>OnlineSpace: 512MB</p>
-        <p>Support: <strong>Yes</strong></p>
-        <a href="#">Buy Now</a>
+      <label for="message">Messages</label> <br>
+      <textarea name="" id="" placeholder="Details your message"></textarea>
+
+      <span id="send-message-btn">
+        <input type="submit" value="Send Message">
+        <i class="fa-solid fa-rocket"></i>
+      </span>
+
+    </div>
+
+    <div>
+      <div class="contact-info">
+        <i class="fa-solid fa-envelope"></i> &#58;
+        <p>support@website.com</p>
+      </div>
+      <div class="contact-info">
+        <i class="fa-solid fa-link"></i> &#58;
+        <p>www.website.com</p>
+      </div>
+      <div class="contact-info">
+        <i class="fa-solid fa-phone"></i> &#58;
+        <p>(+880) 012423523523</p>
+      </div>
+      <div class="contact-info">
+        <i class="fa-solid fa-clock"></i> &#58;
+        <p>9.00 AM - 5.00 PM</p>
+      </div>
+      <div class="contact-info">
+        <i class="fa-solid fa-magnifying-glass-location"></i> &#58;
+        <p>1644 Deer Ridge Drive Rochelle Park, NJ 07662</p>
       </div>
     </div>
-    <div class="plan-item">
-      <div class="plan-money">
-        <i class="fa-solid fa-user"></i>
-        <h2>Basic</h2>
-        <h1><span>$</span>49</h1>
-        <p>user / month</p>
+  </section> -->
+
+    <footer>
+      <div id="footer-name">
+        <h2>Grinny</h2>
+        <p>Your Safety is Our Priority:
+Discover the Secure World of Our LLM Program!</p>
+        <div id="footer-social-icon">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-facebook"></i>
+        </div>
       </div>
 
-      <div class="plan-benifit">
-        <p>Bandwith: 3GB</p>
-        <p>OnlineSpace: 2GB</p>
-        <p>Support: <strong>Yes</strong></p>
-        <a href="#">Buy Now</a>
-      </div>
-    </div>
-    <div class="plan-item">
-      <div class="plan-money">
-        <i class="fa-solid fa-user"></i>
-        <h2>Pro</h2>
-        <h1><span>$</span>89</h1>
-        <p>user / month</p>
-      </div>
+      <div class="footer-link"></div>
 
-      <div class="plan-benifit">
-        <p>Bandwith: 5GB</p>
-        <p>OnlineSpace: 4GB</p>
-        <p>Support: <strong>Yes</strong></p>
-        <a href="#">Buy Now</a>
+      <div class="footer-link">
+        <h4>About Us</h4>
+        <div>
+          <a href="aboutUs.html">Projects</a>
+          <a href="aboutUs.html">Strategies</a>
+          <a href="aboutUs.html">Press</a>
+          <a href="aboutUs.html">Mission</a>
+        </div>
       </div>
-    </div>
-  </section>
-
- 
-
-
-  
-
-  <footer>
-    <div id="footer-name">
-      <h2>Creative Learner</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-      <div id="footer-social-icon">
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-facebook"></i>
+      <div class="footer-link">
+        <h4>Support</h4>
+        <div>
+          <a href="contactUs.html">Developer</a>
+          <a href="contactUs.html">Support</a>
+          <a href="contactUs.html">Customer Service</a>
+          <a href="contactUs.html">Get started</a>
+          <a href="contactUs.html">Guide</a>
+        </div>
       </div>
-    </div>
-    <div class="footer-link">
-      <h4>ABOUT US</h4>
-      <div>
-        <a href="#">Works</a>
-        <a href="#">Strotragy</a>
-        <a href="#">Release</a>
-        <a href="#">Press</a>
-        <a href="#">mission</a>
-      </div>
-    </div>
-    <div class="footer-link">
-      <h4>CUSTOMERS</h4>
-      <div>
-        <a href="#">Tranding</a>
-        <a href="#">Popular</a>
-        <a href="#">Customers</a>
-        <a href="#">Features</a>
-      </div>
-    </div>
-    <div class="footer-link">
-      <h4>SUPPORT</h4>
-      <div>
-        <a href="#">Developer</a>
-        <a href="#">Support</a>
-        <a href="#">Customer Service</a>
-        <a href="#">Get started</a>
-        <a href="#">Guide</a>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-</body>
+  </body>
 
 </html>
