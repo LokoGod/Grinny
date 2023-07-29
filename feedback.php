@@ -4,14 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback</title>
-
-    <?php include 'components/head.html' ?>
-
     
 </head>
 <body>
-
-    <?php include 'components/header.html' ?>
 
     <form id="feed" action="feedback.php" method="post">
         <label for="feed">Enter Feedback:</label><br>

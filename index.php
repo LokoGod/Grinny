@@ -57,7 +57,7 @@
       </ul>
 
       <div id="account-container">
-        <a href="#">Register</a>
+        <a href="register.php">Register</a>
         <a href="logIn.php">Login</a>
       </div>
     </nav>
@@ -71,7 +71,7 @@
           </p>
           <div id="header-subscribe-form">
             <a href="aboutUs.html">
-              <input type="submit" value="Discover!">
+              <input type="submit" value="Discover !">
             </a>
           </div>
         </div>

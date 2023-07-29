@@ -57,7 +57,7 @@
       </ul>
 
       <div id="account-container">
-        <a href="#">Register</a>
+        <a href="register.php">Register</a>
         <a href="logIn.php">Login</a>
       </div>
     </nav>

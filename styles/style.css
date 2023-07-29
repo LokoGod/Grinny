@@ -1009,3 +1009,17 @@ body {
   background-color: #9D96D9;
   outline: none;
 }
+
+/* Add the following styles to center the carousel */
+.carousel-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 50rem; /* Adjust the height as needed */
+}
+
+/* Optional: Adjust the width of the carousel */
+#carouselExample {
+  max-width: 80rem; /* Set your desired max-width */
+  width: 100%;
+}
