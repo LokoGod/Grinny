@@ -1,78 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Css file -->
+    <link rel="stylesheet" href="styles/style.css" />
 
-  <!-- Css file -->
-  <link rel="stylesheet" href="styles/style.css">
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"></script>
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap"
+      rel="stylesheet" />
 
-  <!-- Google font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Fontawesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
 
+    <title>Features</title>
+  </head>
 
-  <!-- Fontawesome cdn link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <body>
+    <nav>
+      <label for="name" id="logo-text">
+        <a href="#">Grinny</a>
+      </label>
 
-  <title>Features</title>
-</head>
+      <input type="checkbox" id="check" />
+      <label for="check" class="toggle">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </label>
 
-<body>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html" class="active">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contactUs.html">Contact</a></li>
+        <li><a href="aboutUs.html">About</a></li>
+      </ul>
 
-  <nav>
+      <div id="account-container">
+        <a href="register.php">Register</a>
+        <a href="logIn.php">Login</a>
+      </div>
+    </nav>
 
-    <label for="name" id="logo-text">
-      <a href="#">Grinny</a>
-    </label>
-
-    <input type="checkbox" id="check">
-    <label for="check" class="toggle">
-      <i class="fa-solid fa-bars-staggered"></i>
-    </label>
-
-    <ul>
-      <li><a href="index.php">Home</a></li>
-      <li><a href="features.html" class="active">Features</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="contactUs.html">Contact</a></li>
-      <li><a href="aboutUs.html">About</a></li>
-    </ul>
-
-    <div id="account-container">
-      <a href="register.php">Register</a>
-      <a href="logIn.php">Login</a>
+    <div class="carousel-container">
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://prismablog.vercel.app/blog/posts/monitoring-best-practices.png"
+              class="d-block w-100"
+              alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://www.atatus.com/glossary/content/images/2021/07/Continuous-Monitoring--1-.jpeg"
+              class="d-block w-100"
+              alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://blog.paessler.com/hubfs/header/blog/website-performance-indicators.png"
+              class="d-block w-100"
+              alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
-  </nav>
 
-  <div class="carousel-container">
-  <div id="carouselExample" class="carousel slide">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        
-        <img src="https://prismablog.vercel.app/blog/posts/monitoring-best-practices.png" class="d-block w-100" alt="...">
+    <div class="row justify-content-center text-center">
+      <div class="col-sm-3 mb-3 mb-sm-0 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Secure User Authentication</h5>
+            <p class="card-text">
+              Verification of user identity using robust and encrypted methods.
+            </p>
+            <i class="fa-solid fa-user-lock fa-2xl" style="color: #5A4FDC;"></i>
+          </div>
+        </div>
       </div>
-      <div class="carousel-item">
-        <img src="https://www.atatus.com/glossary/content/images/2021/07/Continuous-Monitoring--1-.jpeg" class="d-block w-100" alt="...">
+      <div class="col-sm-3 mb-3 mb-sm-0 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Data Encryption</h5>
+            <p class="card-text">
+              Converting plaintext into ciphertext to secure sensitive information.
+            </p>
+            <i class="fa-solid fa-fingerprint fa-2xl" style="color: #5A4FDC;"></i>
+          </div>
+        </div>
       </div>
-      <div class="carousel-item">
-        <img src="https://blog.paessler.com/hubfs/header/blog/website-performance-indicators.png" class="d-block w-100" alt="...">
+      <div class="col-sm-3 mb-3 mb-sm-0 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Firewalls and Network Security</h5>
+            <p class="card-text">
+              Network protection through filtering and monitoring to prevent unauthorized access.
+            </p>
+            <i class="fa-solid fa-shield fa-2xl" style="color: #5A4FDC;"></i>
+          </div>
+        </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-</div>
+
+    <br /><br /><br />
+    <div class="row justify-content-center text-center">
+      <div class="col-sm-3 mb-3 mb-sm-0 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Monitoring and Incident Response</h5>
+            <p class="card-text">
+              Continuous surveillance and prompt action to address cybersecurity incidents.
+            </p>
+            <i class="fa-brands fa-watchman-monitoring fa-2xl" style="color: #5A4FDC;"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 mb-3 mb-sm-0 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Regular System Updates</h5>
+            <p class="card-text">
+              Frequent software patches and upgrades to enhance system security.
+            </p>
+            <i class="fa-solid fa-wrench fa-2xl" style="color: #5A4FDC;"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 mb-3 mb-sm-0 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Privacy Controls</h5>
+            <p class="card-text">
+              Measures to safeguard and manage personal data access and usage.
+            </p>
+            <i class="fa-solid fa-sliders fa-2xl" style="color: #5A4FDC;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+  <br /><br />
+
+  <footer>
+    <div id="footer-name">
+      <h2>Grinny</h2>
+      <p>
+        Your Safety is Our Priority: Discover the Secure World of Our LLM
+        Program!
+      </p>
+      <div id="footer-social-icon">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-facebook"></i>
+      </div>
+    </div>
+
+    <div class="footer-link"></div>
+
+    <div class="footer-link">
+      <h4>About Us</h4>
+      <div>
+        <a href="aboutUs.html">Projects</a>
+        <a href="aboutUs.html">Strategies</a>
+        <a href="aboutUs.html">Press</a>
+        <a href="aboutUs.html">Mission</a>
+      </div>
+    </div>
+    <div class="footer-link">
+      <h4>Support</h4>
+      <div>
+        <a href="contactUs.html">Developer</a>
+        <a href="contactUs.html">Support</a>
+        <a href="contactUs.html">Customer Service</a>
+        <a href="contactUs.html">Get started</a>
+        <a href="contactUs.html">Guide</a>
+      </div>
+    </div>
+  </footer>
+</html>

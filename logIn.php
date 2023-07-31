@@ -40,7 +40,7 @@
     <nav>
 
       <label for="name" id="logo-text">
-        <a href="index.php">Grinny</a>
+        <a href="index.html">Grinny</a>
       </label>
 
       <input type="checkbox" id="check">
@@ -49,7 +49,7 @@
       </label>
 
       <ul>
-        <li><a href="index.php" class="active">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="features.html">Features</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="contactUs.html">Contact</a></li>
