@@ -14,13 +14,14 @@ require_once "db_connection.php";
 // Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Get the data from the textarea and sanitize it to prevent XSS
+  $username = $_SESSION["username"];
   $feed = htmlspecialchars($_POST["feedback"]);
 
   // Insert the data into the database using a prepared statement
-  $stmt = $link->prepare("INSERT INTO feedback (feedback) VALUES (?)");
+  $stmt = $link->prepare("INSERT INTO feedback (username, feedback) VALUES (?,?)");
 
   // Bind the data to the placeholder
-  $stmt->bind_param('s', $feed);
+  $stmt->bind_param('ss', $username,$feed);
 
   // Execute the SQL statement
   if ($stmt->execute()) {
@@ -174,12 +175,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               // Loop through each row and display the data
               while ($row = $result->fetch_assoc()) {
                 $idfeedback = $row['idfeedback'];
+                $username = $row['username'];
                 $feedback = $row['feedback'];
                 ?>
                     <div class="col-sm-4 col-md-3 card-container">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Card Title</h5>
+                                <h5 class="card-title"><?php echo $username; ?></h5>
                                 <p class="card-text"><?php echo $feedback; ?></p>
                                 <i class="fa-solid fa-user user-icon"></i>
                             </div>

@@ -156,13 +156,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="card">
                     <div class="card-body">
                         <h3 class="card-title text-center mb-4">Log in</h3>
-                        <form action="logIn.php" method="post" class="needs-validation" novalidate>
+                        <form method="post" class="needs-validation" novalidate>
                             <div class="form-group">
                                 <input type="text" name="username" class="form-control" placeholder="Username"
                                     required>
                                 <div class="invalid-feedback">
                                     Please enter your username.
-                                </div><br>
+                                </div>
+                                <span class="help-block text-danger"><?php echo $username_err; ?></span>
+                                <br>
                             </div>
                             <div class="form-group">
                                 <input type="password" name="password" class="form-control" placeholder="Password"
@@ -170,6 +172,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <div class="invalid-feedback">
                                     Please enter your password.
                                 </div>
+                                <span class="help-block text-danger"><?php echo $password_err; ?></span>
                             </div>
                             <div class="form-group text-center mt-4">
                                 <button type="submit" class="btn btn-primary">Login</button>
