@@ -153,7 +153,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="contactUs.html">Contact</a></li>
         <li><a href="aboutUs.html">About</a></li>
-        <li><a href="feedback.php" class="active">Features</a></li>
+        <li><a href="feedback.php" class="active">Feedback</a></li>
       </ul>
 
       <div id="account-container">
