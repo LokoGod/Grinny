@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // Include config file
 require_once "db_connection.php";
  
@@ -8,6 +11,7 @@ $username_err = $password_err = $confirm_password_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
+  $username = trim($_POST["username"]);
  
     // Validate username
     if(empty(trim($_POST["username"]))){
@@ -16,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $username_err = "Username can only contain letters, numbers, and underscores.";
     } else{
         // Prepare a select statement
-        $sql = "SELECT id FROM users WHERE username = ?";
+        $sql = "SELECT id FROM register WHERE username = ?";
         
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -63,38 +67,36 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
     
-    // Check input errors before inserting in database
-    if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
-        
-        // Prepare an insert statement
-        $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
-         
-        if($stmt = mysqli_prepare($link, $sql)){
-            // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
-            
-            // Set parameters
-            $param_username = $username;
-            $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
-            
-            // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
-                // Redirect to login page
-                header("location: index.php");
-            } else{
-                echo "Oops! Something went wrong. Please try again later.";
-            }
+    // Check input errors before inserting in the database
+    if (empty($username_err) && empty($password_err) && empty($confirm_password_err)) {
+      // Prepare an insert statement
+      $sql = "INSERT INTO register (username, password) VALUES (?, ?)";
 
-            // Close statement
-            mysqli_stmt_close($stmt);
-        }
-    }
-    
-    // Close connection
-    mysqli_close($link);
+      if ($stmt = mysqli_prepare($link, $sql)) {
+          // Bind variables to the prepared statement as parameters
+          mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
+
+          // Set parameters
+          $param_username = $username;
+          $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+
+          // Attempt to execute the prepared statement
+          if (mysqli_stmt_execute($stmt)) {
+              // Redirect to login page
+              header("location: logIn.php");
+          } else {
+              echo "Oops! Something went wrong. Please try again later.";
+          }
+
+          // Close statement
+          mysqli_stmt_close($stmt);
+      }
+  }
+  // Close connection
+  mysqli_close($link);
 }
-?>
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
