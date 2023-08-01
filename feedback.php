@@ -223,47 +223,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <br /><br />
 
   <footer>
-    <div id="footer-name">
-      <h2>Grinny</h2>
-      <p>
-        Your Safety is Our Priority: Discover the Secure World of Our LLM
-        Program!
-      </p>
-      <div id="footer-social-icon">
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-facebook"></i>
+      <div id="footer-name">
+        <h2>Grinny</h2>
+        <p>© Copyright NSBM 2023. Designed and Developed by Web Group 55</p>
+        <div id="footer-social-icon">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-facebook"></i>
+        </div>
       </div>
-    </div>
 
-    <div class="footer-link"></div>
+      <div class="footer-link"></div>
 
-    <div class="footer-link">
-      <h4>About Us</h4>
-      <div>
-        <a href="aboutUs.html">Projects</a>
-        <a href="aboutUs.html">Strategies</a>
-        <a href="aboutUs.html">Press</a>
-        <a href="aboutUs.html">Mission</a>
+      <div class="footer-link">
+        <h4>About Us</h4>
+        <div>
+          <a href="aboutUs.html">Projects</a>
+          <a href="aboutUs.html">Strategies</a>
+          <a href="aboutUs.html">Press</a>
+          <a href="aboutUs.html">Mission</a>
+        </div>
       </div>
-    </div>
-    <div class="footer-link">
-      <h4>Support</h4>
-      <div>
-        <a href="contactUs.php">Developer</a>
-        <a href="contactUs.php">Support</a>
-        <a href="contactUs.php">Customer Service</a>
-        <a href="contactUs.php">Get started</a>
-        <a href="contactUs.php">Guide</a>
+      <div class="footer-link">
+        <h4>Support</h4>
+        <div>
+          <a href="contactUs.php">Developer</a>
+          <a href="contactUs.php">Support</a>
+          <a href="contactUs.php">Customer Service</a>
+          <a href="contactUs.php">Get started</a>
+          <a href="contactUs.php">Guide</a>
+        </div>
       </div>
-    </div>
-  </footer>
-
-
-
-
-
+    </footer>
     
   </body>
 </html>
