@@ -1,3 +1,89 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+// Include config file
+require_once "db_connection.php";
+
+// Start session
+session_start();
+
+// Define variables and initialize with empty values
+$username = $password = "";
+$username_err = $password_err = "";
+
+// Processing form data when form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Check if username is empty
+    if (empty(trim($_POST["username"]))) {
+        $username_err = "Please enter your username.";
+    } else {
+        $username = trim($_POST["username"]);
+    }
+
+    // Check if password is empty
+    if (empty(trim($_POST["password"]))) {
+        $password_err = "Please enter your password.";
+    } else {
+        $password = trim($_POST["password"]);
+    }
+
+    // Validate credentials
+    if (empty($username_err) && empty($password_err)) {
+        // Prepare a select statement
+        $sql = "SELECT idregister, username, password FROM register WHERE username = ?";
+
+        if ($stmt = mysqli_prepare($link, $sql)) {
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "s", $param_username);
+
+            // Set parameters
+            $param_username = $username;
+
+            // Attempt to execute the prepared statement
+            if (mysqli_stmt_execute($stmt)) {
+                // Store result
+                mysqli_stmt_store_result($stmt);
+
+                // Check if username exists
+                if (mysqli_stmt_num_rows($stmt) == 1) {
+                    // Bind result variables
+                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
+
+                    if (mysqli_stmt_fetch($stmt)) {
+                        if (password_verify($password, $hashed_password)) {
+                            // Password is correct, so start a new session
+                            session_regenerate_id();
+                            $_SESSION["loggedin"] = true;
+                            $_SESSION["id"] = $id;
+                            $_SESSION["username"] = $username;
+
+                            // Redirect user to welcome page
+                            header("location: feedback.php");
+                        } else {
+                            // Display an error message if password is not valid
+                            $password_err = "The password you entered was not valid.";
+                        }
+                    }
+                } else {
+                    // Display an error message if username doesn't exist
+                    $username_err = "No account found with that username.";
+                }
+            } else {
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+    }
+
+    // Close connection
+    mysqli_close($link);
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,13 +149,14 @@
         </div>
     </nav>
 
+    <br><br>
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <div class="card-body">
                         <h3 class="card-title text-center mb-4">Log in</h3>
-                        <form action="index.html" method="post" class="needs-validation" novalidate>
+                        <form action="logIn.php" method="post" class="needs-validation" novalidate>
                             <div class="form-group">
                                 <input type="text" name="username" class="form-control" placeholder="Username"
                                     required>
@@ -96,41 +183,6 @@
             </div>
         </div>
     </div>
-
-    <footer>
-      <div id="footer-name">
-        <h2>Grinny</h2>
-        <p>© Copyright NSBM 2023. Designed and Developed by Web Group 55</p>
-        <div id="footer-social-icon">
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-linkedin"></i>
-          <i class="fa-brands fa-facebook"></i>
-        </div>
-      </div>
-
-      <div class="footer-link"></div>
-
-      <div class="footer-link">
-        <h4>About Us</h4>
-        <div>
-          <a href="aboutUs.html">Projects</a>
-          <a href="aboutUs.html">Strategies</a>
-          <a href="aboutUs.html">Press</a>
-          <a href="aboutUs.html">Mission</a>
-        </div>
-      </div>
-      <div class="footer-link">
-        <h4>Support</h4>
-        <div>
-          <a href="contactUs.php">Developer</a>
-          <a href="contactUs.php">Support</a>
-          <a href="contactUs.php">Customer Service</a>
-          <a href="contactUs.php">Get started</a>
-          <a href="contactUs.php">Guide</a>
-        </div>
-      </div>
-    </footer>
 
 </body>
 

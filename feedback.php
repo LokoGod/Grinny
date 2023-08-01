@@ -1,4 +1,13 @@
 <?php
+session_start();
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    // Get the current URL
+    $current_url = urlencode("http://localhost/missaka_repo/feedback.php" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+    // Redirect to login with the current URL as a parameter
+    header("Location: logIn.php?returnUrl=$current_url");
+    exit;
+}
+
 // Include the database connection file
 require_once "db_connection.php";
 
@@ -19,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo '<div class="alert alert-success" role="alert">Feedback received successfully.</div>';
   } else {
     // Display an error message if something went wrong
-    echo "<div class='alert alert-danger' role='alert'>Error: ". $stmt->error."</div>";
+    echo "<div class='alert alert-danger' role='alert'>Error: " . $stmt->error . "</div>";
   }
 
   // Close the prepared statement
@@ -96,10 +105,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <br><br>
     <h2 class="text-center">Tell us what you think of our product</h2>
     <p class="text-center">We could use your feedback to make our LLM better for everyone</p>
+    <br><br>
+    <?php
+    if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+      echo "<div class='text-center'> Welcome, " . htmlspecialchars($_SESSION["username"]) . "!";
+    } else {
+      echo "<div class='text-center'>You are not logged in.</div>";
+    }
+    ?>
 
     <div class="container text-center">
       <form id="feedback-form" action="feedback.php" method="post">
-      <br><br><br><br>
+      <br>
         <textarea class="form-control" id="feedback-text" name="feedback"
           rows="4" cols="50" placeholder="We'd love to hear your feedback!"></textarea><br>
         <input class='btn btn-primary' type="submit" value="Submit">
