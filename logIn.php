@@ -2,17 +2,13 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Include config file
 require_once "db_connection.php";
 
-// Start session
 session_start();
 
-// Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = "";
 
-// Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if username is empty
     if (empty(trim($_POST["username"]))) {
@@ -30,55 +26,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate credentials
     if (empty($username_err) && empty($password_err)) {
-        // Prepare a select statement
+
         $sql = "SELECT idregister, username, password FROM register WHERE username = ?";
 
         if ($stmt = mysqli_prepare($link, $sql)) {
-            // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_username);
 
-            // Set parameters
             $param_username = $username;
 
-            // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
-                // Store result
+
                 mysqli_stmt_store_result($stmt);
 
-                // Check if username exists
                 if (mysqli_stmt_num_rows($stmt) == 1) {
-                    // Bind result variables
+
                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
 
                     if (mysqli_stmt_fetch($stmt)) {
                         if (password_verify($password, $hashed_password)) {
-                            // Password is correct, so start a new session
                             session_regenerate_id();
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
 
-                            // Redirect user to welcome page
+                            // Redirect user to other page
                             header("location: feedback.php");
                         } else {
-                            // Display an error message if password is not valid
                             $password_err = "The password you entered was not valid.";
                         }
                     }
                 } else {
-                    // Display an error message if username doesn't exist
                     $username_err = "No account found with that username.";
                 }
             } else {
                 echo "Oops! Something went wrong. Please try again later.";
             }
 
-            // Close statement
             mysqli_stmt_close($stmt);
         }
     }
 
-    // Close connection
     mysqli_close($link);
 }
 ?>
@@ -91,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Css file -->
+    <!-- CSS file -->
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/logIn.css">
 
@@ -135,7 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </label>
 
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="features.html">Features</a></li>
             <li><a href="pricing.html">Pricing</a></li>
             <li><a href="contactUs.php">Contact</a></li>
@@ -196,10 +183,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     (function () {
         'use strict'
 
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
         var forms = document.querySelectorAll('.needs-validation')
 
-        // Loop over them and prevent submission
         Array.from(forms).forEach(function (form) {
             form.addEventListener('submit', function (event) {
                 if (!form.checkValidity()) {
@@ -211,4 +196,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }, false)
         })
     })()
+    
 </script>

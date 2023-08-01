@@ -1,6 +1,6 @@
 <?php
 
-// Replace these variables with your actual database credentials
+// DB Credentials
 $servername = "localhost:8111";
 $username = "root";
 $password = "";

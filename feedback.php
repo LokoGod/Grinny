@@ -1,38 +1,33 @@
 <?php
 session_start();
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    // Get the current URL
+    // GET the current URL
     $current_url = urlencode("http://localhost/missaka_repo/feedback.php" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
-    // Redirect to login with the current URL as a parameter
+    // Redirect to login
     header("Location: logIn.php?returnUrl=$current_url");
     exit;
 }
-
-// Include the database connection file
 require_once "db_connection.php";
 
-// Check if the form was submitted
+// Check if the form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Get the data from the textarea and sanitize it to prevent XSS
+  // GET data
   $username = $_SESSION["username"];
   $feed = htmlspecialchars($_POST["feedback"]);
 
-  // Insert the data into the database using a prepared statement
+  // Insert the data into DB
   $stmt = $link->prepare("INSERT INTO feedback (username, feedback) VALUES (?,?)");
 
-  // Bind the data to the placeholder
+  // Binding data
   $stmt->bind_param('ss', $username,$feed);
 
-  // Execute the SQL statement
+  // SQL Execution
   if ($stmt->execute()) {
-    // Display a success message
     echo '<div class="alert alert-success" role="alert">Feedback received successfully.</div>';
   } else {
-    // Display an error message if something went wrong
     echo "<div class='alert alert-danger' role='alert'>Error: " . $stmt->error . "</div>";
   }
 
-  // Close the prepared statement
   $stmt->close();
 }
 
@@ -45,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Css file -->
+    <!-- CSS file -->
     <link rel="stylesheet" href="styles/style.css" />
 
     <!-- Bootstrap -->
@@ -80,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <body>
     <nav>
       <label for="name" id="logo-text">
-        <a href="#">Grinny</a>
+        <a href="index.html">Grinny</a>
       </label>
 
       <input type="checkbox" id="check" />
@@ -130,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       }
 
       #feedback-form {
-        max-width: 400px; /* Adjust the maximum width to your preference */
+        max-width: 400px;
       }
 
     </style>
@@ -163,16 +158,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container">
         <div class="row justify-content-center">
             <?php
-            // Include the database connection file
             require_once "db_connection.php";
 
-            // Fetch data from the database
+            // Fetch data from DB
             $sql = "SELECT * FROM feedback";
             $result = $link->query($sql);
 
-            // Check if there are any records
             if ($result->num_rows > 0) {
-              // Loop through each row and display the data
               while ($row = $result->fetch_assoc()) {
                 $idfeedback = $row['idfeedback'];
                 $username = $row['username'];
@@ -190,54 +182,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php
               }
             } else {
-              // Display a message if no feedback data is available
               echo '<div class="col-12 text-center">No feedback data available.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>';
             }
 
-            // Close the database connection
             $link->close();
             ?>
         </div>
     </div>
 
-
-    <!-- <div class="row justify-content-center text-center">
-      <div class="col-sm-3 mb-3 mb-sm-0 mx-auto">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Mahinda Sirisena</h5>
-            <p class="card-text">
-              Very Good, helped to automate my tasks.
-            </p>
-            <i class="fa-solid fa-user fa-2xl" style="color: #5A4FDC;"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3 mb-3 mb-sm-0 mx-auto">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Rissaka Mathnapriya</h5>
-            <p class="card-text">
-              I was in completly awe with the things this LLM is capable of.
-            </p>
-            <i class="fa-solid fa-user fa-2xl" style="color: #5A4FDC;"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3 mb-3 mb-sm-0 mx-auto">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Henry Cavil</h5>
-            <p class="card-text">
-              Good AI.
-            </p>
-            <i class="fa-solid fa-user fa-2xl" style="color: #5A4FDC;"></i>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </body>
   <br /><br />
 

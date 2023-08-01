@@ -1,22 +1,21 @@
 <?php
-// Include the database connection file
+
 require_once 'db_connection.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Get form data
+  // GET form data
   $email = $_POST['email'];
   $subject = $_POST['subject'];
   $message = $_POST['message'];
 
-  // Prepare and execute the SQL query
+  // SQL Query
   $sql = "INSERT INTO contact (email, subject, message) VALUES ('$email', '$subject', '$message')";
   if (mysqli_query($link, $sql)) {
     echo '<div class="alert alert-success" role="alert">Message recieved succesfully!</div>';
   } else {
-    echo "<div class='alert alert-danger' role='alert'>Error: " . $sql . "<br>" . mysqli_error($link)."</div>";
+    echo "<div class='alert alert-danger' role='alert'>Error: " . $sql . "<br>" . mysqli_error($link) . "</div>";
   }
 
-  // Close the database connection
   mysqli_close($link);
 }
 ?>
@@ -29,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Css file -->
+    <!-- CSS file -->
     <link rel="stylesheet" href="styles/style.css">
 
     <!-- Bootstrap -->
@@ -56,10 +55,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Contact</title>
+    <title>Contact US</title>
 
     <style>
-      /* Add custom CSS for additional styling if needed */
       body {
         padding-top: 20px;
       }
@@ -80,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <nav>
 
       <label for="name" id="logo-text">
-        <a href="#">Grinny</a>
+        <a href="index.html">Grinny</a>
       </label>
 
       <input type="checkbox" id="check">
@@ -106,19 +104,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <br><br>
     <div class="container">
     <div class="row">
-      <!-- Image on the left -->
+      <!-- NSBM Image -->
       <div class="col-md-6">
         <div class="image-container">
           <img src="https://www.maga.lk/wp-content/uploads/2018/03/4-NSBM.jpg" class="img-fluid" alt="NSBM">
         </div>
       </div>
-      <!-- Form on the right -->
+      <!-- Contact Form -->
       <div class="col-md-6">
         <div class="form-container">
           <p>Reach us through our <a href="https://www.nsbm.ac.lk/">website</a></p>
           <p><strong>Or</strong></p>
           <p>Send us a message</p>
-          <form action="contactUs.php" method="post"> <!-- Update the form action -->
+          <form action="contactUs.php" method="post">
             <div class="mb-3">
               <input type="email" class="form-control" name="email" placeholder="E-mail">
             </div>
