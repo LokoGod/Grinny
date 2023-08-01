@@ -1,9 +1,9 @@
 <?php
 
 // Replace these variables with your actual database credentials
-$servername = "localhost";
+$servername = "localhost:8111";
 $username = "root";
-$password = "root";
+$password = "";
 $dbname = "missaka";
 
 try {
