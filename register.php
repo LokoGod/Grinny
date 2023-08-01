@@ -130,7 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
 
-    <title>Feedback</title>
+    <title>Register</title>
   </head>
 
   <body>
