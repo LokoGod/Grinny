@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo '<div class="alert alert-success" role="alert">Feedback received successfully.</div>';
   } else {
     // Display an error message if something went wrong
-    echo "Error: " . $stmt->error;
+    echo "<div class='alert alert-danger' role='alert'>Error: ". $stmt->error."</div>";
   }
 
   // Close the prepared statement
@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <li><a href="index.html">Home</a></li>
         <li><a href="features.html">Features</a></li>
         <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="contactUs.html">Contact</a></li>
+        <li><a href="contactUs.php">Contact</a></li>
         <li><a href="aboutUs.html">About</a></li>
         <li><a href="feedback.php" class="active">Feedback</a></li>
       </ul>
@@ -154,11 +154,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Check if there are any records
             if ($result->num_rows > 0) {
-                // Loop through each row and display the data
-                while ($row = $result->fetch_assoc()) {
-                    $idfeedback = $row['idfeedback'];
-                    $feedback = $row['feedback'];
-            ?>
+              // Loop through each row and display the data
+              while ($row = $result->fetch_assoc()) {
+                $idfeedback = $row['idfeedback'];
+                $feedback = $row['feedback'];
+                ?>
                     <div class="col-sm-4 col-md-3 card-container">
                         <div class="card">
                             <div class="card-body">
@@ -169,10 +169,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
                     </div>
             <?php
-                }
+              }
             } else {
-                // Display a message if no feedback data is available
-                echo '<div class="col-12 text-center">No feedback data available.
+              // Display a message if no feedback data is available
+              echo '<div class="col-12 text-center">No feedback data available.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>';
             }
@@ -251,11 +251,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="footer-link">
       <h4>Support</h4>
       <div>
-        <a href="contactUs.html">Developer</a>
-        <a href="contactUs.html">Support</a>
-        <a href="contactUs.html">Customer Service</a>
-        <a href="contactUs.html">Get started</a>
-        <a href="contactUs.html">Guide</a>
+        <a href="contactUs.php">Developer</a>
+        <a href="contactUs.php">Support</a>
+        <a href="contactUs.php">Customer Service</a>
+        <a href="contactUs.php">Get started</a>
+        <a href="contactUs.php">Guide</a>
       </div>
     </div>
   </footer>

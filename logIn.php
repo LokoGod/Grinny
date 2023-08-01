@@ -52,7 +52,7 @@
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="features.html">Features</a></li>
             <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="contactUs.html">Contact</a></li>
+            <li><a href="contactUs.php">Contact</a></li>
             <li><a href="aboutUs.html">About</a></li>
             <li><a href="feedback.php">Feedback</a></li>
         </ul>
