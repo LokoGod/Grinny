@@ -1,3 +1,34 @@
+<?php
+// Include the database connection file
+require_once "db_connection.php";
+
+// Check if the form was submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Get the data from the textarea and sanitize it to prevent XSS
+  $feed = htmlspecialchars($_POST["feedback"]);
+
+  // Insert the data into the database using a prepared statement
+  $stmt = $link->prepare("INSERT INTO feedback (feedback) VALUES (?)");
+
+  // Bind the data to the placeholder
+  $stmt->bind_param('s', $feed);
+
+  // Execute the SQL statement
+  if ($stmt->execute()) {
+    // Display a success message
+    echo '<div class="alert alert-success" role="alert">Feedback received successfully.</div>';
+  } else {
+    // Display an error message if something went wrong
+    echo "Error: " . $stmt->error;
+  }
+
+  // Close the prepared statement
+  $stmt->close();
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -89,42 +120,105 @@
     <br><br>
 
     <h3 class="text-center">Our Testimonials</h3><br>
+    <style>
+        .card-container {
+            margin: 10px;
+        }
 
-    <div class="row justify-content-center text-center">
-      <div class="col-sm-3 mb-3 mb-sm-0 mx-auto">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Secure User Authentication</h5>
-            <p class="card-text">
-              Verification of user identity using robust and encrypted methods.
-            </p>
-            <i class="fa-solid fa-user fa-2xl" style="color: #5A4FDC;"></i>
-          </div>
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .user-icon {
+            color: #5A4FDC;
+            font-size: 2rem;
+        }
+    </style>
+    <div class="container">
+        <div class="row justify-content-center">
+            <?php
+            // Include the database connection file
+            require_once "db_connection.php";
+
+            // Fetch data from the database
+            $sql = "SELECT * FROM feedback";
+            $result = $link->query($sql);
+
+            // Check if there are any records
+            if ($result->num_rows > 0) {
+                // Loop through each row and display the data
+                while ($row = $result->fetch_assoc()) {
+                    $idfeedback = $row['idfeedback'];
+                    $feedback = $row['feedback'];
+            ?>
+                    <div class="col-sm-4 col-md-3 card-container">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Card Title</h5>
+                                <p class="card-text"><?php echo $feedback; ?></p>
+                                <i class="fa-solid fa-user user-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+            <?php
+                }
+            } else {
+                // Display a message if no feedback data is available
+                echo '<div class="col-12 text-center">No feedback data available.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>';
+            }
+
+            // Close the database connection
+            $link->close();
+            ?>
         </div>
-      </div>
-      <div class="col-sm-3 mb-3 mb-sm-0 mx-auto">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Data Encryption</h5>
-            <p class="card-text">
-              Converting plaintext into ciphertext to secure sensitive information.
-            </p>
-            <i class="fa-solid fa-user fa-2xl" style="color: #5A4FDC;"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3 mb-3 mb-sm-0 mx-auto">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Firewalls and Network Security</h5>
-            <p class="card-text">
-              Network protection through filtering and monitoring to prevent unauthorized access.
-            </p>
-            <i class="fa-solid fa-user fa-2xl" style="color: #5A4FDC;"></i>
-          </div>
-        </div>
-      </div>
     </div>
+
+
+    <!-- <div class="row justify-content-center text-center">
+      <div class="col-sm-3 mb-3 mb-sm-0 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Mahinda Sirisena</h5>
+            <p class="card-text">
+              Very Good, helped to automate my tasks.
+            </p>
+            <i class="fa-solid fa-user fa-2xl" style="color: #5A4FDC;"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 mb-3 mb-sm-0 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Rissaka Mathnapriya</h5>
+            <p class="card-text">
+              I was in completly awe with the things this LLM is capable of.
+            </p>
+            <i class="fa-solid fa-user fa-2xl" style="color: #5A4FDC;"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 mb-3 mb-sm-0 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Henry Cavil</h5>
+            <p class="card-text">
+              Good AI.
+            </p>
+            <i class="fa-solid fa-user fa-2xl" style="color: #5A4FDC;"></i>
+          </div>
+        </div>
+      </div>
+    </div> -->
   </body>
   <br /><br />
 
@@ -170,41 +264,6 @@
 
 
 
-    <?php
-    // Check if the form was submitted
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get the data from the textarea
-    $feed = $_POST["feed"];
-
-    // Validate and sanitize the data (optional but recommended)
-    // htmlspecialchars() helps prevent XSS (Cross-Site Scripting) attacks
-    $feed = htmlspecialchars($feed);
-
-    // Include the database connection file
-    require_once "db_connection.php";
-
-    // Insert the data into the database
-    try {
-    // Prepare the SQL statement with a placeholder
-    $stmt = $conn->prepare("INSERT INTO feedback (idfeedback, feedback) VALUES (:feed)");
-
-    // Bind the data to the placeholder
-    $stmt->bindParam(':feed', $feed);
-
-    // Execute the SQL statement
-    $stmt->execute();
-
-    // Display a success message
-    echo "Feedback recieved successfully.";
-    } catch (PDOException $e) {
-    // Display an error message if something went wrong
-    echo "Error: " . $e->getMessage();
-    }
-
-    // Close the database connection
-    $conn = null;
-    }
-    ?>
-
+    
   </body>
 </html>
