@@ -75,7 +75,7 @@
                                     required>
                                 <div class="invalid-feedback">
                                     Please enter your username.
-                                </div>
+                                </div><br>
                             </div>
                             <div class="form-group">
                                 <input type="password" name="password" class="form-control" placeholder="Password"
