@@ -33,7 +33,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
 
-    <title>Features</title>
+    <title>Feedback</title>
   </head>
 
   <body>
@@ -49,10 +49,11 @@
 
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="features.html" class="active">Features</a></li>
+        <li><a href="features.html">Features</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="contactUs.html">Contact</a></li>
         <li><a href="aboutUs.html">About</a></li>
+        <li><a href="feedback.php" class="active">Features</a></li>
       </ul>
 
       <div id="account-container">
@@ -60,6 +61,10 @@
         <a href="logIn.php">Login</a>
       </div>
     </nav>
+
+    <br><br>
+    <h2 class="text-center">Tell us what you think of our product</h2>
+    <p class="text-center">We could use your feedback to make our LLM better for everyone</p>
 
     <div class="container text-center">
       <form id="feedback-form" action="feedback.php" method="post">
@@ -93,7 +98,7 @@
             <p class="card-text">
               Verification of user identity using robust and encrypted methods.
             </p>
-            <i class="fa-solid fa-user-lock fa-2xl" style="color: #5A4FDC;"></i>
+            <i class="fa-solid fa-user fa-2xl" style="color: #5A4FDC;"></i>
           </div>
         </div>
       </div>
@@ -104,7 +109,7 @@
             <p class="card-text">
               Converting plaintext into ciphertext to secure sensitive information.
             </p>
-            <i class="fa-solid fa-fingerprint fa-2xl" style="color: #5A4FDC;"></i>
+            <i class="fa-solid fa-user fa-2xl" style="color: #5A4FDC;"></i>
           </div>
         </div>
       </div>
@@ -115,7 +120,7 @@
             <p class="card-text">
               Network protection through filtering and monitoring to prevent unauthorized access.
             </p>
-            <i class="fa-solid fa-shield fa-2xl" style="color: #5A4FDC;"></i>
+            <i class="fa-solid fa-user fa-2xl" style="color: #5A4FDC;"></i>
           </div>
         </div>
       </div>
@@ -181,7 +186,7 @@
     // Insert the data into the database
     try {
     // Prepare the SQL statement with a placeholder
-    $stmt = $conn->prepare("INSERT INTO feedback (id, feedback) VALUES (:feed)");
+    $stmt = $conn->prepare("INSERT INTO feedback (idfeedback, feedback) VALUES (:feed)");
 
     // Bind the data to the placeholder
     $stmt->bindParam(':feed', $feed);

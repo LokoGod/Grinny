@@ -1,10 +1,10 @@
 <?php
 
 // Replace these variables with your actual database credentials
-$servername = "127.0.0.1";
+$servername = "localhost";
 $username = "root";
 $password = "root";
-$dbname = "web_site";
+$dbname = "missaka";
 
 try {
     // Create a new PDO connection
