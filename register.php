@@ -212,10 +212,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <footer>
       <div id="footer-name">
         <h2>Grinny</h2>
-        <p>
-          Your Safety is Our Priority: Discover the Secure World of Our LLM
-          Program!
-        </p>
+        <p>© Copyright NSBM 2023. Designed and Developed by Web Group 55</p>
         <div id="footer-social-icon">
           <i class="fa-brands fa-instagram"></i>
           <i class="fa-brands fa-twitter"></i>
@@ -246,3 +243,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
       </div>
     </footer>
+
+</body>
+</html>
