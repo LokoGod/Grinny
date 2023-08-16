@@ -102,6 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <h2 class="text-center">Tell us what you think of our product</h2>
     <p class="text-center">We could use your feedback to make our LLM better for everyone</p>
     <br><br>
+    
     <?php
     if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
       echo "<div class='text-center'> Welcome, " . htmlspecialchars($_SESSION["username"]) . "!";
