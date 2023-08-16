@@ -1,4 +1,5 @@
 <?php
+// Checking session
 session_start();
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     // GET the current URL
@@ -7,11 +8,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("Location: logIn.php?returnUrl=$current_url");
     exit;
 }
+// Connecting database
 require_once "db_connection.php";
 
 // Check if the form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // GET data
+  // GET data from form & session
   $username = $_SESSION["username"];
   $feed = htmlspecialchars($_POST["feedback"]);
 
@@ -104,6 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <br><br>
     
     <?php
+    // Displaying the username of the user
     if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
       echo "<div class='text-center'> Welcome, " . htmlspecialchars($_SESSION["username"]) . "!";
     } else {
@@ -158,6 +161,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </style>
     <div class="container">
         <div class="row justify-content-center">
+          <!-- User Testimonials -->
             <?php
             require_once "db_connection.php";
 
@@ -165,6 +169,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $sql = "SELECT * FROM feedback";
             $result = $link->query($sql);
 
+            // Validating if data remains in the database
             if ($result->num_rows > 0) {
               while ($row = $result->fetch_assoc()) {
                 $idfeedback = $row['idfeedback'];
@@ -183,6 +188,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php
               }
             } else {
+              // validation
               echo '<div class="col-12 text-center">No feedback data available.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>';
