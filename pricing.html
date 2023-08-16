@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS file -->
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css" />
 
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous">
+      crossorigin="anonymous"
+    />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap"
-      rel="stylesheet">
+      rel="stylesheet"
+    />
 
     <!-- Fontawesome cdn link -->
-    <link rel="stylesheet"
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <title>Pricing</title>
   </head>
 
-  <body>
-
+  <section>
     <nav>
-
       <label for="name" id="logo-text">
         <a href="index.html">Grinny</a>
       </label>
 
-      <input type="checkbox" id="check">
+      <input type="checkbox" id="check" />
       <label for="check" class="toggle">
         <i class="fa-solid fa-bars-staggered"></i>
       </label>
@@ -66,14 +69,295 @@
     <section class="features">
       <div id="feature-text">
         <h1>Choose your plan</h1>
-        <p>Your Path, Your Plan: Choose Wisely. <br>Tailor your SaaS LLM
-          experience
-          with flexible part-time or comprehensive full-time options.<br>
-          Empower
-          your legal journey today!
+        <p>
+          Your Path, Your Plan: Choose Wisely. <br />Tailor your SaaS LLM
+          experience with flexible part-time or comprehensive full-time
+          options.<br />
+          Empower your journey today!
         </p>
       </div>
     </section>
+
+    <section class="section-center">
+      <!-- image -->
+      <article class="gift-img">
+        <img src="https://png.pngtree.com/png-clipart/20230801/original/pngtree-express-delivery-service-limited-offer-picture-image_7817356.png" alt="gift" />
+      </article>
+      <!-- info -->
+      <article class="gift-info">
+        <h3>Exculsive prices</h3>
+        <h4 class="giveaway">
+          Purchase our product for the follwing prices until, 24 April 2020, 8:00am
+        </h4>
+        
+        <div class="deadline">
+          <!-- days -->
+          <div class="deadline-format">
+            <div>
+              <h4 class="days">34</h4>
+              <span>days</span>
+            </div>
+          </div>
+          <!-- end of days -->
+          <!-- days -->
+          <div class="deadline-format">
+            <div>
+              <h4 class="hours">34</h4>
+              <span>hours</span>
+            </div>
+          </div>
+          <!-- end of days -->
+          <!-- minutes -->
+          <div class="deadline-format">
+            <div>
+              <h4 class="minutes">34</h4>
+              <span>mins</span>
+            </div>
+          </div>
+          <!-- end of days -->
+          <!-- minutes -->
+          <div class="deadline-format">
+            <div>
+              <h4 class="seconds">34</h4>
+              <span>secs</span>
+            </div>
+          </div>
+          <!-- end of days -->
+        </div>
+      </article>
+    
+      <style>
+
+        img:not(.logo) {
+          width: 100%;
+        }
+        img {
+          display: block;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+          letter-spacing: var(--spacing);
+          text-transform: capitalize;
+          line-height: 1.25;
+          margin-bottom: 0.75rem;
+          font-family: var(--ff-primary);
+        }
+        h1 {
+          font-size: 3rem;
+        }
+        h2 {
+          font-size: 2rem;
+        }
+        h3 {
+          font-size: 1.25rem;
+        }
+        h4 {
+          font-size: 0.875rem;
+        }
+        p {
+          margin-bottom: 1.25rem;
+          color: var(--clr-grey-5);
+        }
+        @media screen and (min-width: 800px) {
+          h1 {
+            font-size: 4rem;
+          }
+          h2 {
+            font-size: 2.5rem;
+          }
+          h3 {
+            font-size: 1.75rem;
+          }
+          h4 {
+            font-size: 1rem;
+          }
+          body {
+            font-size: 1rem;
+          }
+          h1,
+          h2,
+          h3,
+          h4 {
+            line-height: 1;
+          }
+        }
+        /* section */
+        .section {
+          padding: 5rem 0;
+        }
+
+        .section-center {
+          width: 90vw;
+          margin: 5rem auto;
+          max-width: 1170px;
+        }
+
+        main {
+          min-height: 100vh;
+          display: grid;
+          place-items: center;
+        }
+                /*
+        =============== 
+        Countdown Timer
+        ===============
+        */
+        .gift-img {
+          margin-bottom: 2rem;
+        }
+        .gift-info h3 {
+          text-transform: uppercase;
+          color: var(--clr-primary-3);
+        }
+        .gift-info p {
+          color: var(--clr-grey-6);
+        }
+        .date {
+          color: var(--clr-grey-5);
+          font-size: 0.85rem;
+        }
+        @media screen and (min-width: 992px) {
+          .section-center {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            place-items: center;
+            gap: 3rem;
+            width: 95vw;
+          }
+          .gift-img {
+            margin-bottom: 0;
+          }
+        }
+        .gift-info p {
+          margin: 2rem 0;
+        }
+        .deadline {
+          display: flex;
+        }
+        .deadline-format {
+          background: var(--clr-grey-1);
+          color: var(--clr-white);
+          margin-right: 1rem;
+          width: 5rem;
+          height: 5rem;
+          display: grid;
+          place-items: center;
+          text-align: center;
+        }
+        .deadline-format span {
+          display: block;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-size: 0.85rem;
+        }
+        .deadline h4:not(.expired) {
+          font-size: 2rem;
+          margin-bottom: 0.25rem;
+          letter-spacing: var(--spacing);
+        }
+      </style>
+
+      <script>
+        const months = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+        const weekdays = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+        const giveaway = document.querySelector(".giveaway");
+        const deadline = document.querySelector(".deadline");
+        const items = document.querySelectorAll(".deadline-format h4");
+
+        let tempDate = new Date();
+        let tempYear = tempDate.getFullYear();
+        let tempMonth = tempDate.getMonth();
+        let tempDay = tempDate.getDate();
+        // months are ZERO index based;
+        const futureDate = new Date(
+          tempYear,
+          tempMonth,
+          tempDay + 10,
+          11,
+          30,
+          0
+        );
+
+        // let futureDate = new Date(2020, 3, 24, 11, 30, 0);
+
+        const year = futureDate.getFullYear();
+        const hours = futureDate.getHours();
+        const minutes = futureDate.getMinutes();
+
+        let month = futureDate.getMonth();
+        month = months[month];
+        const weekday = weekdays[futureDate.getDay()];
+        const date = futureDate.getDate();
+        giveaway.textContent = `Exculsive prices ends on ${weekday}, ${date} ${month} ${year} ${hours}:${minutes}am`;
+
+        const futureTime = futureDate.getTime();
+        function getRemaindingTime() {
+          const today = new Date().getTime();
+
+          const t = futureTime - today;
+          // 1s = 1000ms
+          // 1m = 60s
+          // 1hr = 60m
+          // 1d = 24hr
+          // values in miliseconds
+          const oneDay = 24 * 60 * 60 * 1000;
+          const oneHour = 60 * 60 * 1000;
+          const oneMinute = 60 * 1000;
+          // calculate all values
+          let days = t / oneDay;
+          days = Math.floor(days);
+          let hours = Math.floor((t % oneDay) / oneHour);
+          let minutes = Math.floor((t % oneHour) / oneMinute);
+          let seconds = Math.floor((t % oneMinute) / 1000);
+
+          // set values array
+          const values = [days, hours, minutes, seconds];
+          function format(item) {
+            if (item < 10) {
+              return (item = `0${item}`);
+            }
+            return item;
+          }
+
+          items.forEach(function (item, index) {
+            item.innerHTML = format(values[index]);
+          });
+
+          if (t < 0) {
+            clearInterval(countdown);
+            deadline.innerHTML = `<h4 class="expired">sorry, this giveaway has expired!</h4>`;
+          }
+        }
+        // countdown;
+        let countdown = setInterval(getRemaindingTime, 1000);
+        //set initial values
+        getRemaindingTime();
+      </script>
+</section>
 
     <section id="plan-container">
       <div class="plan-item">
@@ -122,7 +406,7 @@
         </div>
       </div>
     </section>
-    <br>
+    <br />
 
     <footer>
       <div id="footer-name">
@@ -159,4 +443,4 @@
       </div>
     </footer>
   </body>
-  </html>
+</html>
